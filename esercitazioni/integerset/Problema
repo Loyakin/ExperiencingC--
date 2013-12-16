@@ -1,0 +1,4 @@
+segmentation fault 
+
+
+problema legato probabilmente alla errata gestione dell'allocazione dinamica.
