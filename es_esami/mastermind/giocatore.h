@@ -9,11 +9,13 @@ class Giocatore
 {
   protected:
 
-	vector<int> sequenza[3];
+	vector<int> sequenza;
 
 	Giocatore* g;
 
   public:
+
+	Giocatore() {};
 
 	void set_avversario(Giocatore&);
 
@@ -21,7 +23,7 @@ class Giocatore
 
 	virtual int moove ();
 
-	int check_sequenza(vector<int> v[3]);
+	int check_sequenza(vector<int> v);
 
 };
 

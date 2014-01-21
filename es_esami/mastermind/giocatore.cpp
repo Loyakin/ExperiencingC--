@@ -11,28 +11,24 @@ void Giocatore::set_avversario(Giocatore& p)
 }
 
 
-int Giocatore::check_sequenza(vector<int> v[3])
+int Giocatore::check_sequenza(vector<int> v)
 {
 	int  num_pos;
 
 	int num;
 
-	for(int i=0;i!=3;i++)
+	for(int i=0; i!=v.size(); i++)
 	{
-		for(int j=0;j!=3;j++)
+		for(int j=0; j!=sequenza.size(); j++)
 		{
-
-			if(v[i]==sequenza[j])
+			if(v.at(i)==sequenza.at(j))
 			{
-				if(i==j) num_pos++;
+				if(j==i) num_pos++;
 				else num++;
 			}
 		}
-	};
+	}
 
-	std::cout<<"ci sono:\n"<<num_pos<<" numeri nella posizione giusta;\n"<<num<<" numeri comunque presenti nella sequenza\n";
-
-	if(v==sequenza) return (1);
-	else return (0);
-}	
-	
+	if(num_pos==3) return (1);
+	else return(0);
+}
