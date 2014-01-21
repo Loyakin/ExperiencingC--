@@ -9,13 +9,16 @@ class Giocatore
 {
   protected:
 
+	//ogni giocatore avrà una sequenza propria e un puntatore all'avversario al fine di poter invocare il metodo 
+	//check_sequenza qui di sotto
+
 	vector<int> sequenza;
 
-	Giocatore* g;
+	Giocatore* g;	
 
   public:
 
-	Giocatore() {};
+	Giocatore(): g(NULL) {};
 
 	void set_avversario(Giocatore&);
 
